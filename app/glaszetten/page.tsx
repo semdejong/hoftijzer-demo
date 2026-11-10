@@ -25,7 +25,7 @@ export default function GlaszettenPage() {
           </p>
           <p>Diverse glassoorten kunnen op bestelling geleverd worden.</p>
           <p>
-            U heeft ook de mogelijkheid om glas te laten plaatsen. Niels geeft daarbij advies en informatie over de soorten en de mogelijkheden, van enkel glas tot brandwerend en van geslepen glas tot isolerende beglazing.
+            U heeft ook de mogelijkheid om glas te laten plaatsen. Niels geeft daarbij advies en informatie over de soorten en de mogelijkheden.
           </p>
           <p>
             Veiligheidsglas staat op de lijst als gelaagd of gehard. Monumentenglas staat apart, naast isolerende beglazing.

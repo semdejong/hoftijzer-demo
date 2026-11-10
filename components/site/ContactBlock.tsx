@@ -24,7 +24,7 @@ export default function ContactBlock() {
             </MailLink>
           </div>
         </div>
-        <dl className="dagstaat border border-papier text-inkt">
+        <dl className="border border-papier bg-dagstaat text-inkt">
           <div className="border-b border-inkt/15 px-4 py-3">
             <dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">Adres</dt>
             <dd className="mt-1">

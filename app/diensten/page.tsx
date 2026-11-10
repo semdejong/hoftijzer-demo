@@ -39,7 +39,7 @@ export default function DienstenPage() {
           <ul>
             {lines.map((line) => (
               <li key={line.label} className="border-b border-inkt/15 last:border-b-0">
-                <Link href={line.href} className="grid gap-1 px-4 py-4 sm:grid-cols-[16rem_minmax(0,1fr)] sm:items-baseline sm:px-6">
+                <Link href={line.href} className="grid min-h-11 gap-1 px-4 py-4 sm:grid-cols-[18rem_minmax(0,1fr)] sm:items-baseline sm:px-6">
                   <span className="font-heading text-2xl">{line.label}</span>
                   <span className="text-[18px] leading-snug">{line.note}</span>
                 </Link>
@@ -52,53 +52,14 @@ export default function DienstenPage() {
             </div>
           </div>
         </div>
-        <p className="mt-8 max-w-2xl text-[18px] leading-[1.6]">
-          Daarnaast maak ik gebruik van vakkundige bedrijven voor timmerwerken en stucwerk. Timmerwerk en stucwerk voert Niels niet zelf uit.
-        </p>
       </div>
 
-      <div className="mx-auto grid w-full max-w-6xl items-start gap-8 px-5 pb-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)]">
-        <div className="space-y-6">
-          <Blad klus="Schilderen" onderdeel="Binnen en buiten" title="Van onderhoud tot metamorfose" heading="h2">
-            <p>
-              Voor kleinschalig onderhoud of juist een volledige metamorfose kunt u terecht bij Niels Hoftijzer Schilderwerken. Met ruim 15 jaar ervaring komt uw woning zowel binnen als buiten weer strak uit de lak.
-            </p>
-            <p>
-              Binnen: kozijnen, ramen, deuren en muren, ook afwasbare of krijtmatte verven in badkamer en keuken. Buiten: een strak gelakte voordeur, buitenmuren en onderhoud wanneer bladders, kale of rotte plekken, openstaande naden of slechte kitnaden zichtbaar zijn.
-            </p>
-            <p>
-              <Link href="/schilderwerk" className="text-buspaars-text underline decoration-busoranje underline-offset-4">
-                Lees het schilderwerk
-              </Link>
-            </p>
-          </Blad>
-          <Blad klus="Behangen" onderdeel="Wanden en plafonds" title="Van basis tot fotobehang" heading="h2">
-            <p>
-              Wanden en plafonds kunnen op diverse wijzen afgewerkt worden. U kiest voor basis tot en met exclusief behang, fotobehang, muurverf en glasweefsel, van glad tot gestructureerd.
-            </p>
-            <p>
-              Glasweefsel is een scheurbestendig basismateriaal, naadloos en desgewenst zeer goed reinigbaar. Fotobehang kan ook met uw eigen foto.
-            </p>
-            <p>
-              <Link href="/behangen" className="text-buspaars-text underline decoration-busoranje underline-offset-4">
-                Lees over behangen
-              </Link>
-            </p>
-          </Blad>
-          <Blad klus="Glaszetten" onderdeel="Normen" title="Glas, met advies" heading="h2">
-            <p>
-              Niels Hoftijzer Schilderwerken is gespecialiseerd in het zetten van glas. Ook kunnen wij u voorzien van advies en informatie over de soorten glas en de mogelijkheden.
-            </p>
-            <p>
-              Vrijwel ieder soort glas is leverbaar en voldoet aan de geldende NEN-normen en/of de NPR richtlijnen. Diverse glassoorten kunnen op bestelling geleverd worden.
-            </p>
-            <p>
-              <Link href="/glaszetten" className="text-buspaars-text underline decoration-busoranje underline-offset-4">
-                Lees over glaszetten
-              </Link>
-            </p>
-          </Blad>
-        </div>
+      <div className="mx-auto grid w-full max-w-6xl items-start gap-8 px-5 pb-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)]">
+        <Blad klus="Partners" onderdeel="Eerlijk" title="Timmerwerk en stucwerk" heading="h2">
+          <p>
+            Daarnaast maak ik gebruik van vakkundige bedrijven voor timmerwerken en stucwerk. Timmerwerk en stucwerk voert Niels niet zelf uit. Het schilderwerk, het behang en het glas blijven bij hem.
+          </p>
+        </Blad>
         <div className="flex flex-col gap-6">
           <Dagstaat job={jobById("niels-deur")} />
           <Dagstaat job={jobById("nijntje")} />

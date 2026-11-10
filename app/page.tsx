@@ -34,14 +34,19 @@ export default function Home() {
 
       <section data-section="feiten" aria-label="Kern">
         <Zijstreep />
-        <p className="mx-auto flex w-full max-w-6xl flex-wrap gap-x-3 gap-y-2 px-5 py-4 text-[18px]">
-          {content.facts.map((fact, index) => (
-            <span key={fact} className="inline-flex items-center gap-3">
-              {index > 0 ? <span aria-hidden="true" className="text-busoranje">·</span> : null}
-              {fact}
-            </span>
+        <dl className="mx-auto grid w-full max-w-6xl grid-cols-2 sm:grid-cols-4">
+          {[
+            ["Zaak", "eenmanszaak"],
+            ["Sinds", "2010"],
+            ["Plaats", "Borculo"],
+            ["Werk", "schilder, behang, glas"],
+          ].map(([label, value]) => (
+            <div key={label} className="px-5 py-4 sm:border-l sm:border-inkt/15 sm:first:border-l-0">
+              <dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">{label}</dt>
+              <dd className="mt-1 font-heading text-xl leading-tight">{value}</dd>
+            </div>
           ))}
-        </p>
+        </dl>
       </section>
 
       <section data-section="bus" className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,32rem)]">
@@ -65,8 +70,11 @@ export default function Home() {
         </div>
         <p className="mt-4 max-w-2xl text-[18px] leading-[1.6]">{content.services.intro}</p>
         <div className="mt-8 flex flex-col gap-5">
-          {content.services.items.map((item) => (
-            <article key={item.href} className="border border-inkt bg-dagstaat">
+          {content.services.items.map((item, index) => (
+            <article
+              key={item.href}
+              className={`border border-inkt bg-dagstaat ${index % 2 === 1 ? "lg:ml-24" : "lg:mr-16"}`}
+            >
               <Zijstreep />
               <div className="px-4 py-5 sm:px-6">
                 <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-[0.14em]">
@@ -98,16 +106,14 @@ export default function Home() {
       </section>
 
       <section data-section="voorbeelden" className="py-4">
-        <div className="mx-auto flex w-full max-w-6xl flex-wrap items-end justify-between gap-4 px-5">
-          <div>
-            <h2 className="text-4xl sm:text-5xl">Voorbeelden</h2>
-            <p className="mt-3 max-w-2xl text-[18px] leading-[1.6]">
-              Hieronder ziet u een selectie voorbeelden. De foto&apos;s staan op het formaat waarop ze zijn gemaakt.
-            </p>
-          </div>
+        <div className="mx-auto w-full max-w-6xl px-5">
+          <h2 className="text-4xl sm:text-5xl">Voorbeelden</h2>
+          <p className="mt-3 max-w-2xl text-[18px] leading-[1.6]">
+            Hieronder ziet u een selectie voorbeelden. De foto&apos;s staan op het formaat waarop ze zijn gemaakt.
+          </p>
           <Link
             href="/voorbeelden"
-            className="inline-flex min-h-11 items-center font-heading text-lg text-buspaars-text underline decoration-busoranje underline-offset-4"
+            className="mt-2 inline-flex min-h-11 items-center font-heading text-lg text-buspaars-text underline decoration-busoranje underline-offset-4"
           >
             Alle voorbeelden
           </Link>
@@ -121,9 +127,12 @@ export default function Home() {
 
       <section data-section="waarom" className="mx-auto w-full max-w-6xl px-5 py-16">
         <h2 className="max-w-xl text-4xl sm:text-5xl">Waarom Niels</h2>
-        <div className="mt-8 grid gap-4 lg:grid-cols-2">
-          {content.reasons.map((reason) => (
-            <article key={reason.label} className="border border-inkt bg-dagstaat px-4 py-4 sm:px-5">
+        <div className="mt-8 flex flex-col gap-4">
+          {content.reasons.map((reason, index) => (
+            <article
+              key={reason.label}
+              className={`max-w-3xl border border-inkt bg-dagstaat px-4 py-4 sm:px-5 ${index % 2 === 1 ? "lg:ml-auto" : ""}`}
+            >
               <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">{reason.label}</p>
               <p className="mt-2 text-[18px] leading-[1.6]">{reason.text}</p>
             </article>
@@ -134,7 +143,7 @@ export default function Home() {
       <section data-section="zin" className="on-inkt bg-inkt text-papier">
         <Zijstreep />
         <p className="mx-auto max-w-5xl px-5 py-14 font-heading text-3xl leading-[1.08] sm:text-5xl">
-          Het persoonlijke contact maakt dat het mogelijk is om flexibel te zijn en tot een fantastisch eindresultaat te komen.
+          Goed schilderwerk en goed onderhoud is van essentieel belang voor de duurzaamheid van een pand.
         </p>
       </section>
 

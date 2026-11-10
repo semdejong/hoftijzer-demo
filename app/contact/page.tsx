@@ -16,7 +16,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageIntro title="Contact met Niels Hoftijzer" lede={content.contact.text} />
+      <PageIntro
+        title="Contact met Niels Hoftijzer"
+        lede="Heeft u hulp of advies nodig bij schilderwerken, glaszetten of behangen? Vul het contactformulier in, of bel of mail Niels rechtstreeks."
+      />
       <div className="mx-auto grid w-full max-w-6xl items-start gap-6 px-5 pb-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)]">
         <div className="grid gap-5">
           <Blad klus="Bellen" onderdeel="Direct" title="Bel Niels" heading="h2">

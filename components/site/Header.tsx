@@ -147,7 +147,7 @@ export default function Header({
       </div>
       <Zijstreep draw />
       {open ? (
-        <nav id="mobiel-menu" aria-label="Mobiel menu" className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-b border-inkt bg-papier lg:hidden">
+        <nav id="mobiel-menu" aria-label="Mobiel menu" className="max-h-[calc(100dvh-5rem)] min-h-[calc(100dvh-5rem)] overflow-y-auto border-b border-inkt bg-papier lg:hidden">
           {nav.map((item) => (
             <div key={item.href} className="border-b border-inkt/15">
               <Link href={item.href} className="flex min-h-11 items-center px-5 font-heading text-2xl">

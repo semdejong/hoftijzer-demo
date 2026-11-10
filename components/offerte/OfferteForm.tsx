@@ -47,7 +47,7 @@ export default function OfferteForm({
     "mt-1 w-full min-h-12 border border-inkt bg-wit px-3 text-[18px] text-inkt";
 
   return (
-    <form onSubmit={onSubmit} className="dagstaat border border-inkt">
+    <form onSubmit={onSubmit} className="border border-inkt bg-dagstaat">
       <div className="border-b border-inkt/20 px-4 py-3 sm:px-6">
         <p className="font-mono text-[11px] uppercase tracking-[0.14em]">
           <span>Klus</span>

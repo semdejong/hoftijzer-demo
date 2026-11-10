@@ -20,15 +20,18 @@ export default function BehangenPage() {
         lede="Wanden en plafonds kunnen op diverse wijzen afgewerkt worden. U kiest voor basis tot en met exclusief behang, fotobehang, muurverf en glasweefsel, van glad tot gestructureerd."
       />
       <div className="mx-auto w-full max-w-6xl px-5">
-        <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">Van glad tot gestructureerd</p>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {content.behangSoorten.map((soort) => (
-            <li key={soort} className="border border-inkt bg-dagstaat px-3 py-4">
-              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">Afwerking</p>
-              <p className="mt-2 font-heading text-xl leading-tight">{soort}</p>
-            </li>
-          ))}
-        </ul>
+        <div className="border border-inkt bg-dagstaat">
+          <p className="border-b border-inkt/15 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs sm:px-6">
+            Van glad tot gestructureerd
+          </p>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-5">
+            {content.behangSoorten.map((soort) => (
+              <li key={soort} className="border-b border-inkt/15 px-4 py-4 last:border-b-0 sm:px-6 lg:border-b-0 lg:border-r lg:last:border-r-0">
+                <p className="font-heading text-2xl leading-tight">{soort}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className="mx-auto mt-12 grid w-full max-w-6xl items-start gap-10 px-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,32rem)]">
         <div className="space-y-6">

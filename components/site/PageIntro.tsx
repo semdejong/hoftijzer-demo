@@ -1,4 +1,5 @@
 import VanMark from "@/components/site/VanMark";
+import Zijstreep from "@/components/site/Zijstreep";
 
 export default function PageIntro({
   title,
@@ -14,7 +15,10 @@ export default function PageIntro({
         <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-kitgrijs">Borculo</p>
       </div>
       <h1 className="mt-4 max-w-4xl text-4xl text-balance sm:text-6xl">{title}</h1>
-      <p className="mt-5 max-w-2xl text-[18px] leading-[1.6] text-kitgrijs">{lede}</p>
+      <div className="mt-4 max-w-[12rem]">
+        <Zijstreep />
+      </div>
+      <p className="mt-5 max-w-2xl text-[18px] leading-[1.6]">{lede}</p>
     </header>
   );
 }

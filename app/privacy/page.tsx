@@ -34,7 +34,6 @@ export default function PrivacyPage() {
               {contact.phone}
             </a>
           </p>
-          <p>Dit is een concept van Sleads. Het is geen officiële website van Niels Hoftijzer Schilderwerken.</p>
         </Blad>
         <Blad klus="Bezoek" onderdeel="Cookieloos" title="Geen cookies" heading="h2">
           <p>

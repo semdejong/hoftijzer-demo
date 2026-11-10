@@ -17,7 +17,7 @@ export default function OverNielsPage() {
     <>
       <PageIntro
         title="Over Niels"
-        lede="Niels Hoftijzer Schilderwerken is een eenmanszaak opgericht in 2010. Schildersbedrijf Niels Hoftijzer uit Borculo."
+        lede="Schildersbedrijf Niels Hoftijzer uit Borculo. Niels Hoftijzer Schilderwerken is een eenmanszaak opgericht in 2010."
       />
       <div className="mx-auto grid w-full max-w-6xl items-start gap-10 px-5 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)]">
         <div className="flex flex-col gap-6">
@@ -26,7 +26,10 @@ export default function OverNielsPage() {
           <Dagstaat job={jobById("bus-oprit")} />
         </div>
         <div className="space-y-4 text-[18px] leading-[1.6]">
-          {content.about.text.map((paragraph) => (
+          <p>
+            Als bedrijf sta ik voor vakmanschap en betrouwbaarheid. Voor al uw schilderwerk binnen en/of buiten kunt u bij mij terecht.
+          </p>
+          {content.about.text.slice(1).map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
           <p>

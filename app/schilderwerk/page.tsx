@@ -6,6 +6,7 @@ import Dagstaat from "@/components/site/Dagstaat";
 import JobBrowser from "@/components/site/JobBrowser";
 import PageIntro from "@/components/site/PageIntro";
 import Signalen from "@/components/site/Signalen";
+import Zijstreep from "@/components/site/Zijstreep";
 
 export const metadata: Metadata = {
   title: "Schilderwerk",
@@ -91,18 +92,26 @@ export default function SchilderwerkPage() {
             Kleuradvies hoort bij het schilderwerk, net als renovatie en deuren en kozijnen. Voor timmerwerken en stucwerk maak ik gebruik van vakkundige bedrijven.
           </p>
         </Blad>
-        <section data-section="btw" className="border border-inkt bg-dagstaat px-5 py-6 lg:col-span-2">
-          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">Informatie van Niels · btw</p>
-          <h2 className="mt-3 text-3xl">{content.btw.title}</h2>
-          <p className="mt-4">{content.btw.lead}</p>
-          <p className="mt-4">Het lage btw-tarief is onder andere geldig op:</p>
-          <ul className="mt-3 space-y-2">
-            {content.btw.items.map((item) => (
-              <li key={item} className="border-t border-inkt/15 pt-2">
-                {item}
-              </li>
-            ))}
-          </ul>
+        <section data-section="btw" className="border border-inkt bg-dagstaat lg:col-span-2">
+          <Zijstreep />
+          <div className="px-5 py-6">
+            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">Informatie van Niels · btw</p>
+            <h2 className="mt-3 text-3xl">{content.btw.title}</h2>
+            <p className="mt-4">{content.btw.lead}</p>
+            <p className="mt-4">Het lage btw-tarief is onder andere geldig op:</p>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+              {content.btw.items.map((item) => (
+                <li key={item} className="border-t border-inkt/15 pt-2">
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-5 flex justify-end">
+              <div className="border border-inkt px-2 py-1">
+                <span className="font-heading text-sm leading-none">Niels</span>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
       <CtaBand />

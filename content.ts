@@ -112,13 +112,51 @@ export const content = {
   },
 
   reasons: [
-    "Wanneer u uw schilderwerk door Niels Hoftijzer Schilderwerken laat uitvoeren, kiest u voor kwaliteit. Door te kiezen voor kwaliteit bespaart u op termijn in het onderhoud van uw schilderwerk.",
-    "Doordat er geen bedrijfspand betaald moet worden, kan Niels een eerlijke prijs-kwaliteit bieden.",
-    "Het persoonlijke contact maakt dat het mogelijk is om flexibel te zijn en tot een fantastisch eindresultaat te komen.",
-    "Als bedrijf sta ik voor vakmanschap en betrouwbaarheid.",
-    "Niels Hoftijzer Schilderwerken denkt met u mee voor een oplossing die het beste bij u past.",
-    "Mijn visie op goede planning is dat er naast een strakke inplanning van het werk altijd ruimte moet zijn voor onverhoopte extra of noodwerkzaamheden. Het belang van de klant staat immers altijd voorop.",
+    {
+      label: "Kwaliteit",
+      text: "Wanneer u uw schilderwerk door Niels Hoftijzer Schilderwerken laat uitvoeren, kiest u voor kwaliteit. Door te kiezen voor kwaliteit bespaart u op termijn in het onderhoud van uw schilderwerk.",
+    },
+    {
+      label: "Geen bedrijfspand",
+      text: "Doordat er geen bedrijfspand betaald moet worden, kan Niels een eerlijke prijs-kwaliteit bieden.",
+    },
+    {
+      label: "Persoonlijk",
+      text: "Het persoonlijke contact maakt dat het mogelijk is om flexibel te zijn en tot een fantastisch eindresultaat te komen.",
+    },
+    {
+      label: "Vakmanschap",
+      text: "Als bedrijf sta ik voor vakmanschap en betrouwbaarheid.",
+    },
+    {
+      label: "Meedenken",
+      text: "Niels Hoftijzer Schilderwerken denkt met u mee voor een oplossing die het beste bij u past.",
+    },
+    {
+      label: "Planning",
+      text: "Mijn visie op goede planning is dat er naast een strakke inplanning van het werk altijd ruimte moet zijn voor onverhoopte extra of noodwerkzaamheden. Het belang van de klant staat immers altijd voorop.",
+    },
   ],
+
+  signalen: {
+    lead: "Wanneer er op het schilderwerk bladders, kale of rotte plekken, openstaande naden of slechte kitnaden te zien zijn, is een onderhoudsbeurt sterk aan te raden.",
+    items: ["Bladders", "Kale of rotte plekken", "Openstaande naden", "Slechte kitnaden"],
+    slot: "Tijdig onderhoud houdt kozijnen en deuren in goede staat, de kosten laag en de waarde van uw woning op peil.",
+  },
+
+  binnenOnderdelen: [
+    { label: "Kozijnen, ramen en deuren", text: "De basis voor goed houdend buitenschilderwerk, inclusief verstekken, kitnaden en glasafdichtingen." },
+    { label: "Muren", text: "Strak afgewerkte muren, kleuren en effecten die de sfeer van het interieur bepalen." },
+    { label: "Badkamer en keuken", text: "Speciale verven en coatings, afwasbaar of krijtmat, voor een diepe kleur." },
+  ],
+
+  buitenOnderdelen: [
+    { label: "Voordeur", text: "Een strak gelakte voordeur is het visitekaartje van uw woning." },
+    { label: "Buitenmuren", text: "Ook buitenmuren kunnen geschilderd worden, wat voor een totaal ander aangezicht zorgt." },
+    { label: "Lakwerk", text: "Met de juiste producten wordt er strak lakwerk geleverd van hoge kwaliteit." },
+  ],
+
+  behangSoorten: ["Basis behang", "Exclusief behang", "Fotobehang", "Muurverf", "Glasweefsel"],
 
   about: {
     title: "Over Niels",
@@ -146,6 +184,14 @@ export const content = {
     {
       q: "Werkt Niels alleen?",
       a: "Niels Hoftijzer Schilderwerken is een eenmanszaak opgericht in 2010. Daarnaast maak ik gebruik van vakkundige bedrijven voor timmerwerken en stucwerk. Timmerwerk en stucwerk voert hij niet zelf uit.",
+    },
+    {
+      q: "Ook de voordeur en de buitenmuren?",
+      a: "Ja. Een strak gelakte voordeur en mooi buitenschilderwerk is het visitekaartje van uw woning. Ook buitenmuren kunnen geschilderd worden wat voor een totaal ander aangezicht zorgt. Binnen gaat het om kozijnen, ramen, deuren en muren.",
+    },
+    {
+      q: "Wanneer is een onderhoudsbeurt aan te raden?",
+      a: "Wanneer er op het schilderwerk bladders, kale of rotte plekken, openstaande naden of slechte kitnaden te zien zijn. Tijdig onderhoud houdt kozijnen en deuren in goede staat, de kosten laag en de waarde van uw woning op peil.",
     },
   ],
 
@@ -332,11 +378,27 @@ export const jobs: JobPhoto[] = [
   },
 ];
 
-export const jobGroups: { id: JobGroup; title: string }[] = [
-  { id: "buiten", title: "Buiten en bus" },
-  { id: "binnen", title: "Binnen" },
-  { id: "behang", title: "Behang" },
-  { id: "niels", title: "Niels aan het werk" },
+export const jobGroups: { id: JobGroup; title: string; lede: string }[] = [
+  {
+    id: "buiten",
+    title: "Buiten en bus",
+    lede: "De witte werkbus met paarse belettering, steigers voor woningen met dakkapellen, en een rieten portiek met de geveltekst DE BERKELSTREEK.",
+  },
+  {
+    id: "binnen",
+    title: "Binnen",
+    lede: "Witte deuren, een houten trap met donkere treden en een geschilderd kozijndetail in wit en crème.",
+  },
+  {
+    id: "behang",
+    title: "Behang",
+    lede: "Nijntje-behang, en een binnenwand in een blauwgroene tint tussen twee witte deuren.",
+  },
+  {
+    id: "niels",
+    title: "Niels aan het werk",
+    lede: "Niels Hoftijzer met kwast en polo, en Niels die een deur schildert.",
+  },
 ];
 
 export const homeJobIds = [

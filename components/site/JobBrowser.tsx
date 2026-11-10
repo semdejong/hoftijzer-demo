@@ -11,7 +11,7 @@ export default function JobBrowser({
 }: {
   jobs: JobPhoto[];
   variant: "strip" | "grid";
-  groups?: { id: JobPhoto["group"]; title: string }[];
+  groups?: { id: JobPhoto["group"]; title: string; lede?: string }[];
 }) {
   const ordered = groups
     ? groups.flatMap((group) => jobs.filter((job) => job.group === group.id))
@@ -58,7 +58,7 @@ export default function JobBrowser({
 
   const listClass =
     variant === "strip"
-      ? "flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-5 py-2 pb-4 lg:grid lg:grid-cols-2 lg:overflow-visible"
+      ? "flex w-full min-w-0 snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain px-5 py-2 pb-4 lg:grid lg:grid-cols-2 lg:overflow-visible"
       : "grid gap-6 sm:grid-cols-2";
 
   function openId(id: string) {
@@ -84,6 +84,7 @@ export default function JobBrowser({
             return (
               <section key={group.id} data-section={group.id}>
                 <h2 className="text-3xl sm:text-4xl">{group.title}</h2>
+                {group.lede ? <p className="mt-2 max-w-2xl text-[18px] leading-snug">{group.lede}</p> : null}
                 <div className="mt-5">{cards(list)}</div>
               </section>
             );

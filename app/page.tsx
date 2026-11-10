@@ -5,12 +5,14 @@ import Dagstaat from "@/components/site/Dagstaat";
 import FaqList from "@/components/site/FaqList";
 import JobBrowser from "@/components/site/JobBrowser";
 import { CtaPair } from "@/components/site/Links";
+import Signalen from "@/components/site/Signalen";
 import VanMark from "@/components/site/VanMark";
 import Zijstreep from "@/components/site/Zijstreep";
 
 export default function Home() {
   const portret = jobById("portret");
   const aanHetWerk = jobById("niels-deur");
+  const bus = jobById("bus-oprit");
   const strip = homeJobIds.map((id) => jobById(id));
 
   return (
@@ -42,6 +44,20 @@ export default function Home() {
         </p>
       </section>
 
+      <section data-section="bus" className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,32rem)]">
+        <div>
+          <VanMark />
+          <h2 className="mt-4 max-w-xl text-4xl sm:text-6xl">Eerlijke prijs-kwaliteit, zonder bedrijfspand.</h2>
+          <p className="mt-5 max-w-xl text-[18px] leading-[1.6]">
+            Doordat er geen bedrijfspand betaald moet worden, kan Niels een eerlijke prijs-kwaliteit bieden. Het persoonlijke contact maakt dat het mogelijk is om flexibel te zijn en tot een fantastisch eindresultaat te komen.
+          </p>
+          <p className="mt-4 max-w-xl text-[18px] leading-[1.6]">
+            Als bedrijf sta ik voor vakmanschap en betrouwbaarheid. Voor al uw schilderwerk binnen en/of buiten kunt u bij mij terecht.
+          </p>
+        </div>
+        <Dagstaat job={bus} />
+      </section>
+
       <section data-section="diensten" className="mx-auto w-full max-w-6xl px-5 py-16">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-4xl sm:text-5xl">{content.services.title}</h2>
@@ -53,13 +69,13 @@ export default function Home() {
             <article key={item.href} className="border border-inkt bg-dagstaat">
               <Zijstreep />
               <div className="px-4 py-5 sm:px-6">
-                <p className="font-mono text-[11px] uppercase tracking-[0.14em]">
+                <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-[0.14em]">
                   <span>Klus</span>
-                  <span className="mx-2 text-busoranje" aria-hidden="true">/</span>
+                  <span className="text-busoranje" aria-hidden="true">/</span>
                   <span className="text-kitgrijs">{item.klus}</span>
-                  <span className="mx-3 text-busoranje" aria-hidden="true">·</span>
+                  <span className="text-busoranje" aria-hidden="true">·</span>
                   <span>Onderdeel</span>
-                  <span className="mx-2 text-busoranje" aria-hidden="true">/</span>
+                  <span className="text-busoranje" aria-hidden="true">/</span>
                   <span className="text-kitgrijs">{item.onderdeel}</span>
                 </p>
                 <h3 className="mt-3 text-3xl">{item.title}</h3>
@@ -101,15 +117,25 @@ export default function Home() {
         </div>
       </section>
 
+      <Signalen />
+
       <section data-section="waarom" className="mx-auto w-full max-w-6xl px-5 py-16">
         <h2 className="max-w-xl text-4xl sm:text-5xl">Waarom Niels</h2>
-        <ul className="mt-8 max-w-3xl border-y border-inkt/20">
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {content.reasons.map((reason) => (
-            <li key={reason} className="border-b border-inkt/15 py-4 text-[18px] leading-[1.6] last:border-b-0">
-              {reason}
-            </li>
+            <article key={reason.label} className="border border-inkt bg-dagstaat px-4 py-4 sm:px-5">
+              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">{reason.label}</p>
+              <p className="mt-2 text-[18px] leading-[1.6]">{reason.text}</p>
+            </article>
           ))}
-        </ul>
+        </div>
+      </section>
+
+      <section data-section="zin" className="on-inkt bg-inkt text-papier">
+        <Zijstreep />
+        <p className="mx-auto max-w-5xl px-5 py-14 font-heading text-3xl leading-[1.08] sm:text-5xl">
+          Het persoonlijke contact maakt dat het mogelijk is om flexibel te zijn en tot een fantastisch eindresultaat te komen.
+        </p>
       </section>
 
       <section data-section="over-niels" className="mx-auto grid w-full max-w-6xl items-start gap-10 px-5 py-8 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)]">

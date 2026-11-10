@@ -24,6 +24,12 @@ export default function GlaszettenPage() {
             Wij bieden verschillende glassoorten; van enkel glas tot brandwerend en van geslepen glas tot isolerende beglazing. Vrijwel ieder soort glas is leverbaar en voldoet aan de geldende NEN-normen en/of de NPR richtlijnen.
           </p>
           <p>Diverse glassoorten kunnen op bestelling geleverd worden.</p>
+          <p>
+            U heeft ook de mogelijkheid om glas te laten plaatsen. Niels geeft daarbij advies en informatie over de soorten en de mogelijkheden, van enkel glas tot brandwerend en van geslepen glas tot isolerende beglazing.
+          </p>
+          <p>
+            Veiligheidsglas staat op de lijst als gelaagd of gehard. Monumentenglas staat apart, naast isolerende beglazing.
+          </p>
         </div>
         <div className="border border-inkt bg-dagstaat">
           <Zijstreep />
@@ -34,8 +40,9 @@ export default function GlaszettenPage() {
             <h2 className="mt-3 text-3xl">Soorten</h2>
             <ul className="mt-4">
               {content.glassTypes.map((type) => (
-                <li key={type} className="border-t border-inkt/15 py-3">
-                  {type}
+                <li key={type} className="border-t border-inkt/15 py-4">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">Soort</p>
+                  <p className="mt-1 font-heading text-2xl leading-tight sm:text-3xl">{type}</p>
                 </li>
               ))}
             </ul>

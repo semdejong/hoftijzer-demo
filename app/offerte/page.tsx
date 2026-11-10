@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { content } from "@/content";
 import OfferteForm from "@/components/offerte/OfferteForm";
+import Blad from "@/components/site/Blad";
 import PageIntro from "@/components/site/PageIntro";
 import { PhoneLink } from "@/components/site/Links";
 
@@ -17,7 +18,29 @@ export default function OffertePage() {
         title="Vrijblijvende offerte"
         lede="Heeft u hulp of advies nodig bij schilderwerken, glaszetten of behangen? Vul hieronder het contactformulier in. Dit is een concept: uw mailprogramma opent met het bericht, er wordt niets automatisch verzonden."
       />
-      <div data-section="offerte" className="mx-auto w-full max-w-3xl px-5 pb-8">
+      <div data-section="offerte" className="mx-auto grid w-full max-w-6xl items-start gap-8 px-5 pb-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+        <div className="space-y-5">
+          <Blad klus="Invulling" onderdeel="Vrijblijvend" title="Wat u kunt noemen" heading="h2">
+            <p>Naam, telefoon en e-mail zijn nodig. Adres of plaats en een korte toelichting mogen erbij.</p>
+            <ul className="border-t border-inkt/20">
+              {content.offerteDiensten.map((dienst) => (
+                <li key={dienst} className="border-b border-inkt/15 py-2">
+                  {dienst}
+                </li>
+              ))}
+            </ul>
+            <p>Vink aan wat bij de klus hoort. Meerdere diensten kunnen samen.</p>
+          </Blad>
+          <Blad klus="Btw" onderdeel="Informatie van Niels" heading="h3">
+            <p>{content.btw.lead}</p>
+            <ul className="list-disc space-y-1 pl-5">
+              {content.btw.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </Blad>
+        </div>
+        <div>
         <p className="mb-6">
           U kunt ook bellen naar{" "}
           <PhoneLink className="inline-flex min-h-11 items-center text-buspaars-text underline decoration-busoranje underline-offset-4">
@@ -35,10 +58,7 @@ export default function OffertePage() {
           phoneHref={content.contact.phoneHref}
           diensten={content.offerteDiensten}
         />
-        <aside className="mt-8 border border-inkt bg-dagstaat px-5 py-5">
-          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-kitgrijs">Informatie van Niels · btw</p>
-          <p className="mt-3">{content.btw.lead}</p>
-        </aside>
+        </div>
       </div>
     </>
   );

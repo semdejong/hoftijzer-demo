@@ -1,12 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --brand: #1d4ed8;
+  --brand: #4d3694;
   --brand-fg: #ffffff;
-  --accent: #f59e0b;
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --muted: #f1f5f9;
+  --accent: #f27228;
+  --background: #f4f1ea;
+  --foreground: #1a1528;
+  --muted: #f8f5ee;
+  --inkt: #1a1528;
+  --buspaars: #4d3694;
+  --buspaars-text: #3a2670;
+  --busoranje: #f27228;
+  --busoranje-text: #b44512;
+  --busgroen: #44b859;
+  --busgroen-text: #1e7a32;
+  --bel: #1e7a32;
+  --papier: #f4f1ea;
+  --dagstaat: #f8f5ee;
+  --wit: #ffffff;
+  --kitgrijs: #5c5866;
 }
 
 @theme inline {
@@ -16,11 +28,147 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-inkt: var(--inkt);
+  --color-buspaars: var(--buspaars);
+  --color-buspaars-text: var(--buspaars-text);
+  --color-busoranje: var(--busoranje);
+  --color-busoranje-text: var(--busoranje-text);
+  --color-busgroen: var(--busgroen);
+  --color-busgroen-text: var(--busgroen-text);
+  --color-bel: var(--bel);
+  --color-papier: var(--papier);
+  --color-dagstaat: var(--dagstaat);
+  --color-wit: var(--wit);
+  --color-kitgrijs: var(--kitgrijs);
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-anybody), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-fragment), ui-monospace, monospace;
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+  scroll-padding-bottom: 6rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--papier);
+  color: var(--inkt);
   font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+::selection {
+  background: var(--buspaars);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--buspaars);
+  outline-offset: 2px;
+}
+
+.on-inkt :focus-visible {
+  outline-color: var(--busoranje);
+}
+
+.dagstaat {
+  background-color: var(--dagstaat);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 31px,
+    rgba(26, 21, 40, 0.08) 31px,
+    rgba(26, 21, 40, 0.08) 32px
+  );
+}
+
+.job-photo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+details .faq-minus {
+  display: none;
+}
+
+details[open] .faq-plus {
+  display: none;
+}
+
+details[open] .faq-minus {
+  display: inline;
+}
+
+dialog.lightbox {
+  margin: auto;
+  max-width: min(36rem, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 1.5rem);
+  width: 100%;
+  overflow: auto;
+  border: 1px solid var(--inkt);
+  background: var(--dagstaat);
+  padding: 0;
+  color: var(--inkt);
+}
+
+dialog.lightbox::backdrop {
+  background: rgba(26, 21, 40, 0.72);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .zijstreep-draw {
+    transform-origin: left center;
+    animation: zijstreep-in 0.65s ease both;
+  }
+
+  .rise {
+    animation: rise 0.45s ease both;
+  }
+}
+
+@keyframes zijstreep-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zijstreep-draw,
+  .rise {
+    animation: none;
+  }
 }

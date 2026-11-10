@@ -1,101 +1,95 @@
 /**
  * ÉÉN bestand om aan te passen per demo.
- * Kopieer de starter, vul hieronder de gegevens van de prospect in, klaar.
+ * Gegevens geverifieerd op nhschilderwerken.nl (10 nov 2026).
  */
 export const content = {
-  // Slug = Vercel-project- en GitHub-reponaam (eindigt op "-demo"). Wordt door scripts/new-demo.sh gezet.
+  // Slug = Vercel-project- en GitHub-reponaam (eindigt op "-demo").
   // Ook de "data-demo" voor de Sleads demo-analytics tracker.
   slug: "hoftijzer-demo",
 
   company: {
-    name: "Voorbeeldbedrijf",
-    tagline: "Vakmanschap uit de regio, sinds 1998",
+    name: "Niels Hoftijzer Schilderwerken",
+    tagline: "Schildersbedrijf Niels Hoftijzer uit Borculo",
     description:
-      "Wij helpen particulieren en bedrijven met betrouwbaar werk, eerlijk advies en een persoonlijke aanpak.",
-    logo: "/logo.png", // zet het logo in /public en pas het pad aan ("" = alleen tekst)
-    city: "Utrecht",
+      "Niels Hoftijzer Schilderwerken is een eenmanszaak opgericht in 2010. Voor kleinschalig onderhoud of juist een volledige metamorfose — schilderwerk binnen en buiten, behangen en glaszetten.",
+    logo: "/img/logo/niels-hoftijzer-logo.jpg",
+    city: "Borculo",
   },
 
-  // Huisstijlkleuren van de prospect (hex)
   colors: {
-    primary: "#1d4ed8",
+    primary: "#4D3694",
     primaryForeground: "#ffffff",
-    accent: "#f59e0b",
-    background: "#ffffff",
-    foreground: "#0f172a",
-    muted: "#f1f5f9",
+    accent: "#F27228",
+    background: "#F4F1EA",
+    foreground: "#1A1528",
+    muted: "#F8F5EE",
   },
 
   seo: {
-    title: "Voorbeeldbedrijf | Vakmanschap uit Utrecht",
-    description: "Conceptwebsite voor Voorbeeldbedrijf.",
+    title: "Niels Hoftijzer Schilderwerken | Schildersbedrijf in Borculo",
+    description:
+      "Schildersbedrijf Niels Hoftijzer uit Borculo: eenmanszaak sinds 2010, gespecialiseerd in schilderen, behangen en glaszetten, met persoonlijk advies.",
     lang: "nl",
   },
 
   nav: [
-    { label: "Diensten", href: "#diensten" },
-    { label: "Over ons", href: "#over-ons" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Contact", href: "#contact" },
+    { label: "Diensten", href: "/diensten" },
+    { label: "Voorbeelden", href: "/voorbeelden" },
+    { label: "Over Niels", href: "/over-niels" },
+    { label: "Contact", href: "/contact" },
   ],
 
   hero: {
-    title: "Vakwerk waar u op kunt bouwen",
+    title: "Niels schildert in Borculo — eenmanszaak, persoonlijk contact.",
     subtitle:
-      "Snel geregeld, duidelijk geprijsd en netjes opgeleverd. Vraag vandaag nog vrijblijvend een offerte aan.",
-    primaryCta: { label: "Offerte aanvragen", href: "#contact" },
-    secondaryCta: { label: "Bekijk onze diensten", href: "#diensten" },
-    image: "", // bv. "/hero.jpg" in /public of een externe URL; leeg = kleurverloop
-    highlights: ["25+ jaar ervaring", "Gratis advies aan huis", "Garantie op al ons werk"],
+      "Niels Hoftijzer Schilderwerken is een eenmanszaak opgericht in 2010. Met ruim 15 jaar ervaring komt uw woning zowel binnen als buiten weer strak uit de lak.",
+    primaryCta: { label: "Bel 06 238 820 27", href: "tel:+31623882027" },
+    secondaryCta: { label: "Offerte aanvragen", href: "/offerte" },
+    image: "/img/werk/nh-schilderwerken-foto1-1.jpg",
+    highlights: ["Eenmanszaak sinds 2010", "Borculo", "Schilder, behang en glas"],
   },
 
   services: {
     title: "Onze diensten",
-    intro: "Alles onder één dak, van eerste advies tot oplevering.",
+    intro: "Schilderen, behangen, glaszetten, kleuradvies en renovatie — Niels denkt met u mee voor een oplossing die het beste bij u past.",
     items: [
-      { icon: "🛠️", title: "Dienst één", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
-      { icon: "📐", title: "Dienst twee", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
-      { icon: "✅", title: "Dienst drie", text: "Korte omschrijving van wat deze dienst inhoudt en wat de klant eraan heeft." },
+      { icon: "", title: "Schilderwerken", text: "Voor kleinschalig onderhoud of juist een volledige metamorfose. Binnen- en buitenschilderwerk, deuren en kozijnen, kleur- en materiaaladvies." },
+      { icon: "", title: "Behangen", text: "Wanden en plafonds, van basis tot exclusief behang, fotobehang, muurverf en glasweefsel, van glad tot gestructureerd." },
+      { icon: "", title: "Glaszetten", text: "Van enkel glas tot brandwerend en van geslepen glas tot isolerende beglazing. Vrijwel ieder soort glas is leverbaar en voldoet aan de geldende NEN-normen en/of NPR-richtlijnen." },
     ],
   },
 
   about: {
-    title: "Over ons",
+    title: "Over Niels",
     text: [
-      "Wat begon als een klein familiebedrijf is uitgegroeid tot een vertrouwd adres in de regio.",
-      "We werken met vaste vakmensen, houden ons aan afspraken en staan ook na de oplevering voor u klaar.",
+      "Niels Hoftijzer Schilderwerken is een eenmanszaak opgericht in 2010. Als bedrijf sta ik voor vakmanschap en betrouwbaarheid. Voor al uw schilderwerk binnen en/of buiten kunt u bij mij terecht.",
+      "Doordat er geen bedrijfspand betaald moet worden, kan Niels een eerlijke prijs-kwaliteit bieden. Het persoonlijke contact maakt dat het mogelijk is om flexibel te zijn en tot een fantastisch eindresultaat te komen. Daarnaast maak ik gebruik van vakkundige bedrijven voor timmerwerken en stucwerk.",
     ],
-    image: "", // optioneel
-    stats: [
-      { value: "25+", label: "jaar ervaring" },
-      { value: "1.200+", label: "tevreden klanten" },
-      { value: "9,2", label: "gemiddeld cijfer" },
-    ],
+    image: "/img/werk/nh-schilderwerken-niels-1.jpg",
+    stats: [] as { value: string; label: string }[],
   },
 
   reviews: {
-    title: "Wat klanten zeggen",
-    items: [
-      { name: "Familie Jansen", text: "Netjes en snel gewerkt, precies volgens afspraak. Echt een aanrader!", rating: 5 },
-      { name: "Petra de Vries", text: "Duidelijke communicatie en een eerlijke prijs. We komen zeker terug.", rating: 5 },
-      { name: "Mark Bakker", text: "Vakkundig advies en mooi resultaat. Heel tevreden.", rating: 5 },
-    ],
+    title: "",
+    items: [] as { name: string; text: string; rating: number }[],
   },
 
   contact: {
     title: "Neem contact op",
-    text: "Bel, mail of kom langs. We reageren binnen één werkdag.",
-    phone: "030 123 45 67",
-    email: "info@voorbeeldbedrijf.nl",
-    address: "Voorbeeldstraat 1, 1234 AB Utrecht",
-    openingHours: ["Ma t/m vr: 08:00 – 17:30", "Za: 09:00 – 13:00"],
-    whatsapp: "", // bv. "31612345678" (zonder +)
-    cta: { label: "Bel direct", href: "tel:0301234567" },
+    text: "Heeft u hulp of advies nodig bij schilderwerken, glaszetten of behangen? Bel of mail Niels, of vraag een vrijblijvende offerte aan.",
+    phone: "06 238 820 27",
+    email: "info@nhschilderwerken.nl",
+    address: "Keizer Ottostraat 38, 7271 VP Borculo",
+    openingHours: [] as string[],
+    whatsapp: "",
+    cta: { label: "Bel 06 238 820 27", href: "tel:+31623882027" },
   },
 
   footer: {
-    kvk: "", // bv. "KvK 12345678"
-    socials: [] as { label: string; href: string }[],
+    kvk: "",
+    socials: [
+      { label: "Facebook", href: "https://www.facebook.com/Niels-Hoftijzer-Schilderwerken-326039510870797/" },
+    ] as { label: string; href: string }[],
   },
 };
 
